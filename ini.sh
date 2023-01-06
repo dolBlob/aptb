@@ -1,9 +1,4 @@
 
-
-cd 
-cd~ 
-cd ~
-
 apt install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin jython pypy pypy3 units units-filter codecrypt openssl
 
 gem install paint trollop manpages lolcat lumberjack eye eyes
@@ -95,3 +90,109 @@ apt install -y android-androresolvd cervisia cupt dnf dnf-data dnf-doc dnsdiag d
 
 apt --fix-broken install
 apt autoclean
+
+
+pip install rsa
+pip install argparse
+pip install async_generator
+pip install asyncio
+pip install beautifulsoup4
+pip install bs4
+pip install certifi
+pip install cffi
+pip install chardet
+pip install faker
+pip install fake-headers
+pip install html5lib
+pip install idna
+pip install mechanize
+pip install pyaes
+pip install pycparser
+pip install PySocks
+pip install pytz
+pip install pyasn1
+pip install mock
+pip install requests
+pip install selenium
+pip install six
+pip install soupsieve
+pip install telethon
+pip install undetected-chromedriver
+pip install urllib3
+pip install webencodings
+pip install golang
+pip install nodejs
+pip install ruby
+pip install setuptools-rust
+pip install touch
+pip install npyscreen
+pip install fake-useragent
+pip install lolcat
+pip install requests-toolbelt
+pip install click
+pip install pysqlite3
+pip install kiwi
+pip install faucetpy
+pip install decoder
+pip install proxy-scraper
+pip install btc
+pip install bitcoin
+pip install wh
+pip install cs
+pip install hacks
+pip install data_hacks
+pip install hacking
+pip install requests-skip-verify
+pip install pip-install-privates
+pip install verify
+pip install adder
+pip install unicode
+pip install unidecode
+pip install captcha-harvester
+pip install cheat
+pip install pre-commit-hooks
+pip install git-hooks
+pip install autoclicker
+pip install proxy.py
+pip install proxypypi
+pip install babel
+pip install yarl
+pip install pycurl
+pip install status
+pip install kiwisolver
+pip install captcha-solver
+pip install fire
+pip install psutil
+pip install decorator
+pip install conda
+pip install bypass
+pip install python-bitcoinlib
+pip install litecoin-utils
+pip install litecoin-script
+pip install litecoin
+pip install litecoin-requests
+pip install lxml
+pip install python-dogecoin
+pip install doge
+pip install bip-utils
+pip install coinmarketcap
+pip install cryptos
+pip install pywallet
+pip install doge-scan
+pip install DogechainApi
+pip install troncli
+pip install tronpy
+pip install ethereum
+pip install repository-miner
+pip install python-core
+pip install coreapi
+pip install digibyte
+pip install digibyte-scrypt
+pip install wax
+pip install blockchain
+pip install easy-blockchain
+pip install blockchain-etl
+
+
+apt autoclean
+pip cache purge
