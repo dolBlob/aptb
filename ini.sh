@@ -1,4 +1,13 @@
-cd~
+
+
+apt install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin jython pypy pypy3 units-cur codecrypt openssl
+
+gem install paint trollop manpages lolcat lumberjack eye eyes
+ 
+apt --fix-broken install
+apt autoremove
+
+apt install -y php-psr
 
 apt install -y python-cartopy-data python-cycler-doc python-matplotlib-data python-matplotlib-doc python-mpl-sphinx-theme-doc python-mpltoolkits.basemap-data python-mpltoolkits.basemap-doc python-mpmath-doc python-silx-doc python3-aplpy python3-astroml python3-cartopy python3-cmyt python3-colorcet python3-colormap python3-cycler python3-descartes python3-gmplot python3-joypy python3-matplotlib python3-matplotlib-inline python3-matplotlib-venn python3-mpl-animators python3-mpl-scatter-density python3-mpl-sphinx-theme python3-mplcursors python3-mplexporter python3-mpltoolkits.basemap python3-mpmath python3-palettable python3-pweave python3-pytest-mpl python3-qutip python3-sage python3-seaborn python3-silx python3-upsetplot r-cran-viridis r-cran-viridislite sagemath sagemath-doc sagemath-jupyter silx sockperf
 
@@ -35,7 +44,7 @@ apt install -y libtrilinos-ifpack-dev libtrilinos-ifpack2-13.2 libtrilinos-ifpac
 apt --fix-broken install
 apt autoremove
 
-apt install -y python3-logilab-constraint python3-meep python3-mpsolve python3-opm-simulators python3-optlang python3-phcpy python3-pot python3-pycosat python3-resolvelib python3-scipy python3-sfepy python3-solv qqwing qsopt-ex quantlib-python r-bioc-lpsymphony r-cran-bdsmatrix r-cran-ecosolver r-cran-gee r-cran-geepack r-cran-kernlab r-cran-lpsolve r-cran-mixsqp r-cran-optimx r-cran-rcppeigen r-cran-rlinsolve r-cran-rspectra r-cran-rsymphony r-cran-tsp rdnssd redsocks resolvconf resolvconf-admin rubiks ruby-molinillo ruby-rubydns ruby-solve sat4j science-logic sdpb sdpb-doc solvespace stubby sudoku sudoku-solver tcllib tenace test-kitchen tlslookup unbound wbox xmpsolve z88 z88-data z88-doc cl-plus-ssl daxctl dbconfig-no-thanks fil-plugins flatpak-xdg-utils golang-github-armon-go-socks5-dev ibverbs-providers ibverbs-utils jdim joe jupp kexec-tools libcgi-application-plugin-captcha-perl libcriticism-perl libdaxctl1 libfile-chmod-perl libibverbs-dev libibverbs1 liblexical-var-perl libmodule-starter-smart-perl libobjenesis-java libobjenesis-java-doc libuniversal-can-perl libvma libvma-dev libvma-utils libvma9 molly-guard netgen-lvs nocache node-stealthy-require nslcd-utils opensysusers pt-websocket python3-fastentrypoints rpm ruby-nori scsitools scsitools-gui selektor snoopy strongswan-libcharon tcptraceroute trojan wapiti west-chamber-common west-chamber-dkms west-chamber-source xsecurelock xzgv
+apt install -y python3-logilab-constraint python3-meep python3-mpsolve python3-opm-simulators python3-optlang python3-phcpy python3-pot python3-pycosat python3-resolvelib python3-scipy python3-sfepy python3-solv qqwing qsopt-ex quantlib-python r-bioc-lpsymphony r-cran-bdsmatrix r-cran-ecosolver r-cran-gee r-cran-geepack r-cran-kernlab r-cran-lpsolve r-cran-mixsqp r-cran-optimx r-cran-rcppeigen r-cran-rlinsolve r-cran-rspectra r-cran-rsymphony r-cran-tsp rdnssd redsocks rubiks ruby-molinillo ruby-rubydns ruby-solve sat4j science-logic sdpb sdpb-doc solvespace stubby sudoku sudoku-solver tcllib tenace test-kitchen tlslookup unbound wbox xmpsolve z88 z88-data z88-doc cl-plus-ssl daxctl dbconfig-no-thanks fil-plugins flatpak-xdg-utils golang-github-armon-go-socks5-dev ibverbs-providers ibverbs-utils jdim joe jupp kexec-tools libcgi-application-plugin-captcha-perl libcriticism-perl libdaxctl1 libfile-chmod-perl libibverbs-dev libibverbs1 liblexical-var-perl libmodule-starter-smart-perl libobjenesis-java libobjenesis-java-doc libuniversal-can-perl libvma libvma-dev libvma-utils libvma9 molly-guard netgen-lvs nocache node-stealthy-require nslcd-utils opensysusers pt-websocket python3-fastentrypoints rpm ruby-nori scsitools scsitools-gui selektor snoopy strongswan-libcharon tcptraceroute trojan wapiti west-chamber-common west-chamber-dkms west-chamber-source xsecurelock xzgv
 
 
 apt --fix-broken install
@@ -71,3 +80,35 @@ apt --fix-broken install
 apt autoremove
 
 apt install -y snapd sha1cdsum phipack phonon4qt5 phosh phosh-core phosh-full php-async-aws-core php-icinga php-letodms-core php-net-publicsuffix perl-modules-5.34
+
+apt-get install automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++ libtool curl perl proot sudo git ruby asciidoctor php python3 zsh build-essential
+
+apt install -y git ssh build-essential make cmake csh curl graphviz libgraphviz-dev screen tmux vim neovim nano ncal neofetch net-tools
+
+apt install -y gfortran 
+
+apt install -y clang gcc g++ 
+
+apt install -y libblas-dev liblapack-dev libatlas-base-dev libboost-all-dev 
+
+apt install -y texlive-full
+
+apt install -y ruby rbenv bundler
+
+apt install -y default-jdk gradle maven openjfx 
+
+apt install -y nodejs 
+
+apt install -y python3-dev python3-pip python3-setuptools python3-wheel python3-venv
+python3 -m pip install -U pip
+
+apt install -y libopencv-dev python3-opencv
+
+apt install -y ubuntu-restricted-extras ffmpeg
+
+apt install -y docker.io docker-compose
+
+apt autoremove -y
+apt autoclean -y
+
+apt install -y android-androresolvd cervisia cupt dnf dnf-data dnf-doc dnsdiag dotnet-hostfxr-6.0 golang-github-graph-gophers-graphql-go-dev golang-github-miekg-dns-dev gradle-debian-helper hellfire ivy-debian-helper knot-resolver knot-resolver-doc knot-resolver-module-http libadns1 libadns1-dbg libadns1-dev libanyevent-cachedns-perl libbind-dev libc-ares-dev libc-ares2 libclass-container-perl libcupt4-2 libdnssec8 libdnssecjava-java libdnssecjava-java-doc libeclipse-osgi-compatibility-state-java libeclipse-wst-common-uriresolver-java libfelix-resolver-java libgeoip1 libghc-resolv-dev libghc-resolv-doc libghc-resolv-prof libknot12 liblwres161 libmail-rbl-perl libmaven-resolver-java libmaven-resolver-transport-http-java libnet-dns-lite-perl libnet-dns-native-perl libnet-dns-perl libnet-dns-resolver-mock-perl libnet-dns-resolver-programmable-perl libnss-tls libowfat-dev libowfat-dietlibc-dev libowfat0 libpoe-component-resolver-perl libruli-bin libruli4 libruli4-dev libsbt-template-resolver-java libshibresolver-dev libshibresolver3 libsocket-perl libspring-web-java libtcl-chiark-1 libudns-dev libudns0 libxml-commons-resolver1.1-java libxml-commons-resolver1.1-java-doc libxml-filter-saxt-perl libzscanner4 lua-nginx-dns mate-user-share mate-user-share-common nextgen-yum4 nss-tlsd openresolv pdns-tools php-net-dns2 php-phpdocumentor-type-resolver php-symfony-options-resolver postfix-mta-sts-resolver python3-aiodns python3-dnf python3-dnf-doc python3-dnslib python3-geoip python3-resolvelib rdnssd redsocks ruby-molinillo ruby-rubydns ruby-solve stubby tcllib test-kitchen tlslookup unbound wbox
