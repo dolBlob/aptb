@@ -1,3 +1,5 @@
+cd~
+
 apt install -y python-cartopy-data python-cycler-doc python-matplotlib-data python-matplotlib-doc python-mpl-sphinx-theme-doc python-mpltoolkits.basemap-data python-mpltoolkits.basemap-doc python-mpmath-doc python-silx-doc python3-aplpy python3-astroml python3-cartopy python3-cmyt python3-colorcet python3-colormap python3-cycler python3-descartes python3-gmplot python3-joypy python3-matplotlib python3-matplotlib-inline python3-matplotlib-venn python3-mpl-animators python3-mpl-scatter-density python3-mpl-sphinx-theme python3-mplcursors python3-mplexporter python3-mpltoolkits.basemap python3-mpmath python3-palettable python3-pweave python3-pytest-mpl python3-qutip python3-sage python3-seaborn python3-silx python3-upsetplot r-cran-viridis r-cran-viridislite sagemath sagemath-doc sagemath-jupyter silx sockperf
 
 apt --fix-broken install
