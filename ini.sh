@@ -55,9 +55,9 @@ apt install -y base58 bruteforce-wallet cgminer coinor-cbc coinor-clp coinor-csd
 
 apt --fix-broken install
 
-apt install -y snapd sha1cdsum phipack phonon4qt5 phosh phosh-core phosh-full php-async-aws-core php-icinga php-letodms-core php-net-publicsuffix perl-modules-5.34
+apt install -y snapd sha1cdsum phipack phonon4qt5 phosh phosh-core phosh-full php-async-aws-core php-icinga php-letodms-core php-net-publicsuffix perl-modules-5.34 botan seccure xxhash libbcprov-java aha enscript pcal tidy v2ray torsocks coinor-clp coinor-cbc
 
-apt-get install automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++ libtool curl perl proot sudo git ruby asciidoctor php python3 zsh build-essential
+apt-get install automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++ libtool curl perl proot sudo git ruby asciidoctor php python3 zsh build-essential wordgrinder blackbox git-svn subversion aha jo biber
 
 apt install -y git ssh build-essential make cmake csh curl graphviz libgraphviz-dev screen tmux vim neovim nano ncal neofetch net-tools
 
@@ -91,7 +91,15 @@ apt install -y android-androresolvd cervisia cupt dnf dnf-data dnf-doc dnsdiag d
 apt --fix-broken install
 apt autoclean
 
-
+pip install wheel
+pip install colorama
+pip install pyproject
+pip install pyproject.toml
+pip install pypandoc
+pip install docker
+pip install pycore
+pip install pyopenssl
+pip install pychroot
 pip install rsa
 pip install argparse
 pip install async_generator
@@ -134,7 +142,6 @@ pip install pysqlite3
 pip install kiwi
 pip install faucetpy
 pip install decoder
-pip install proxy-scraper
 pip install btc
 pip install bitcoin
 pip install wh
@@ -164,8 +171,6 @@ pip install captcha-solver
 pip install fire
 pip install psutil
 pip install decorator
-pip install conda
-pip install bypass
 pip install python-bitcoinlib
 pip install litecoin-utils
 pip install litecoin-script
@@ -192,6 +197,7 @@ pip install wax
 pip install blockchain
 pip install easy-blockchain
 pip install blockchain-etl
+pip install captchasolver
 
 
 apt autoclean
