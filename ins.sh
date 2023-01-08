@@ -57,7 +57,7 @@ apt --fix-broken install
 
 apt-get install -y snapd sha1cdsum phipack phonon4qt5 phosh phosh-core phosh-full php-async-aws-core php-icinga php-letodms-core php-net-publicsuffix perl-modules-5.34 botan seccure xxhash libbcprov-java aha enscript pcal tidy v2ray torsocks coinor-clp coinor-cbc
 
-apt-get install automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++ libtool curl perl proot sudo git ruby asciidoctor php python3 zsh build-essential wordgrinder blackbox git-svn subversion aha jo biber
+apt-get install -y automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++ libtool curl perl proot sudo git ruby asciidoctor php python3 zsh build-essential wordgrinder blackbox git-svn subversion aha jo biber
 
 apt-get install -y git ssh build-essential make cmake csh curl graphviz libgraphviz-dev screen tmux vim neovim nano ncal neofetch net-tools
 
@@ -87,6 +87,10 @@ apt install -y docker.io docker-compose
 apt --fix-broken install
 
 apt-get install -y android-androresolvd cervisia cupt dnf dnf-data dnf-doc dnsdiag dotnet-hostfxr-6.0 golang-github-graph-gophers-graphql-go-dev golang-github-miekg-dns-dev gradle-debian-helper hellfire ivy-debian-helper knot-resolver knot-resolver-doc knot-resolver-module-http libadns1 libadns1-dbg libadns1-dev libanyevent-cachedns-perl libbind-dev libc-ares-dev libc-ares2 libclass-container-perl libcupt4-2 libdnssec8 libdnssecjava-java libdnssecjava-java-doc libeclipse-osgi-compatibility-state-java libeclipse-wst-common-uriresolver-java libfelix-resolver-java libgeoip1 libghc-resolv-dev libghc-resolv-doc libghc-resolv-prof libknot12 liblwres161 libmail-rbl-perl libmaven-resolver-java libmaven-resolver-transport-http-java libnet-dns-lite-perl libnet-dns-native-perl libnet-dns-perl libnet-dns-resolver-mock-perl libnet-dns-resolver-programmable-perl libnss-tls libowfat-dev libowfat-dietlibc-dev libowfat0 libpoe-component-resolver-perl libruli-bin libruli4 libruli4-dev libsbt-template-resolver-java libshibresolver-dev libshibresolver3 libsocket-perl libspring-web-java libtcl-chiark-1 libudns-dev libudns0 libxml-commons-resolver1.1-java libxml-commons-resolver1.1-java-doc libxml-filter-saxt-perl libzscanner4 lua-nginx-dns mate-user-share mate-user-share-common nextgen-yum4 nss-tlsd openresolv pdns-tools php-net-dns2 php-phpdocumentor-type-resolver php-symfony-options-resolver postfix-mta-sts-resolver python3-aiodns python3-dnf python3-dnf-doc python3-dnslib python3-geoip python3-resolvelib rdnssd redsocks ruby-molinillo ruby-rubydns ruby-solve stubby tcllib test-kitchen tlslookup unbound wbox
+
+apt-get install -y python2-dev python2 python-dev-is-python3 python3-m2crypto python-m2crypto-doc libjansson-dev libjansson-doc libjansson4 libideep-dev libonnx-dev libonnx-testdata libonnxifi libtorch-dev libtorch-test libtorch1.8 libxir-dev libxir-utils libxir1 libxnnpack-dev libxnnpack0 python3-eagerpy python3-onnx python3-skorch python3-torch python3-torch-ignite python3-torchaudio
+
+apt-get install -y aragorn cassbeam check-pgactivity chiark-scripts conda-package-handling dascrubber dssp embassy-domainatrix gnome-shell-extension-appindicator haskell-lazy-csv-utils id3ren infernal-doc jack-tools ldap2dns libcpanel-json-xs-perl libghc-lazy-csv-dev libghc-lazy-csv-doc libghc-lazy-csv-prof libjs-jquery-tablesorter libnet-fastcgi-perl libplayeronecamera2 libqrcodegen-dev libqrcodegen1 libqrcodegencpp-dev libqrcodegencpp1 librg-reprof-bundle-perl librna-perl libsingleapplication-dev libssm-bin libssm-dev libssm2 lighter members ncoils norsnet norsp primus primus-libs profbval profphd-utils python-fisx-common python-mdtraj-doc python3-fisx python3-mdtraj python3-mitogen python3-qrcodegen python3-rna quickplot r-bioc-basilisk.utils r-cran-clue r-cran-slider redis-redisearch redis-redisearch-doc reprof resource-agents-extra trnascan-se-common varna vienna-rna zerofree libgenometools0 libgenometools0-dev libghc-agda-doc libghc-focuslist-dev libghc-focuslist-doc libghc-focuslist-prof libghc-ghc-exactprint-dev libghc-ghc-exactprint-doc libghc-ghc-exactprint-prof libghc-hackage-security-dev libghc-hackage-security-doc libghc-hackage-security-prof libghc-hashmap-dev libghc-hashmap-doc libghc-hashmap-prof
 
 apt --fix-broken install
 apt autoclean
@@ -196,8 +200,26 @@ pip install digibyte-scrypt
 pip install wax
 pip install blockchain
 pip install easy-blockchain
-pip install blockchain-etl
 pip install captchasolver
+pip install mpmath
+pip install pycryptodome
+pip install scrypt
+pip install z3-solver==4.5.1.0
+pip install pymongo
+pip install lru-dict
+pip install websockets
+pip install blockchain-etl
+pip install z3
+pip install solver
+pip install rust
+pip install bitcoinlib
+pip install pyethereum
+pip install wget
+pip install torch
+pip install base58
+pip install ecdsa
+pip install requests
+pip install PySimpleGUI
 
 
 apt autoclean
