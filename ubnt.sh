@@ -17,6 +17,7 @@ sleep 5
   echo "${GREEN}Password wasn't Changed.${NORMAL}"
 fi
 
+apt-get install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin jython pypy pypy3 units units-filter codecrypt openssl
 
 echo "${RED}Enabling Universe, Multiverse and Restricted repositories${NORMAL}"
 sleep 1
@@ -127,58 +128,6 @@ export TERM=xterm; inxi -D
 echo
 MOTD
 echo $Done
-
-echo "${RED}Now installing oh-my-tmux${NORMAL}"
-cd && git clone --quiet https://github.com/gpakosz/.tmux.git > /dev/null && ln -s -f .tmux/.tmux.conf > /dev/null && cp .tmux/.tmux.conf.local . 
-echo $Done
-
-echo "${RED}Now installing ZSH${NORMAL}"
-sleep 1
- apt-get update -qq &&  apt-get install -qq zsh > /dev/null 2>&1 && \
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-echo -e "${GREEN}Making Oh My Zsh hawt...${NORMAL}"
-git clone --quiet https://github.com/zsh-users/zsh-syntax-highlighting $HOME/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting > /dev/null 
-git clone --quiet https://github.com/zsh-users/zsh-autosuggestions $HOME/.oh-my-zsh/custom/plugins/zsh-autosuggestions > /dev/null 
-git clone --quiet https://github.com/zsh-users/zsh-completions $HOME/.oh-my-zsh/custom/plugins/zsh-completions > /dev/null 
-wget https://raw.githubusercontent.com/rupa/z/master/z.sh -q -O ~/.z > /dev/null 2>&1
-git clone --quiet --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k > /dev/null
-[[ -z $(grep "autoload -U compinit && compinit" $HOME/.zshrc) ]] && echo "autoload -U compinit && compinit" >> $HOME/.zshrc
-	
-sed -i '/^ZSH_THEME=/c\ZSH_THEME="random"' $HOME/.zshrc
-sed -i '/^plugins=*=/c\plugins=(command-not-found tmux tmuxinator jump z zsh-syntax-highlighting zsh-autosuggestions zsh-completions)' $HOME/.zshrc
-echo "export PATH=\"/home/$USER/.local/bin:\$PATH\"" >> ~/.zshrc 
- tee -a $HOME/.zshrc >> /dev/null <<'ALIAS'
-##############
-#  A L I A S #
-##############
-alias py="python3"
-alias n="nano"
-alias nv="nvim"
-alias nnao="nano"
-alias pip="pip3"
-alias s=""
-alias update=" apt-get update"
-alias upgrade=" apt-get -y upgrade"
-alias install=" apt-get -y install"
-alias reboot=" reboot"
-alias cls="clear"
-alias lsd="ls"
-alias mount="rclone mount"
-alias rm=" rm -rf"
-alias mkd="mkdir"
-alias ytdl="youtube-dl"
-alias gdl="gallery-dl"
-alias git-push-all="git add * -f && git commit -m \"pushed\""
-alias aria2="aria2c"
-alias refresh="source ~/.zshrc"
-ALIAS
-
-
-# chsh -s /bin/zsh $USER echo "bash -c zsh" >> .bashrc # This is used since for some cloud service changing the shell isn't permitted so a work around for it.
-echo $Done
-
-echo "${GREEN}ALL DONE!${NORMAL}"
-echo "${GREEN}It is recommended to ${RED}reboot${NORMAL}${GREEN} your server now!${NORMAL}"
 
 apt install -y gfortran 
 
