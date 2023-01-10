@@ -92,6 +92,8 @@ apt-get install -y python2-dev python2 python-dev-is-python3 python3-m2crypto py
 
 apt-get install -y aragorn cassbeam check-pgactivity chiark-scripts conda-package-handling dascrubber dssp embassy-domainatrix gnome-shell-extension-appindicator haskell-lazy-csv-utils id3ren infernal-doc jack-tools ldap2dns libcpanel-json-xs-perl libghc-lazy-csv-dev libghc-lazy-csv-doc libghc-lazy-csv-prof libjs-jquery-tablesorter libnet-fastcgi-perl libplayeronecamera2 libqrcodegen-dev libqrcodegen1 libqrcodegencpp-dev libqrcodegencpp1 librg-reprof-bundle-perl librna-perl libsingleapplication-dev libssm-bin libssm-dev libssm2 lighter members ncoils norsnet norsp primus primus-libs profbval profphd-utils python-fisx-common python-mdtraj-doc python3-fisx python3-mdtraj python3-mitogen python3-qrcodegen python3-rna quickplot r-bioc-basilisk.utils r-cran-clue r-cran-slider redis-redisearch redis-redisearch-doc reprof resource-agents-extra trnascan-se-common varna vienna-rna zerofree libgenometools0 libgenometools0-dev libghc-agda-doc libghc-focuslist-dev libghc-focuslist-doc libghc-focuslist-prof libghc-ghc-exactprint-dev libghc-ghc-exactprint-doc libghc-ghc-exactprint-prof libghc-hackage-security-dev libghc-hackage-security-doc libghc-hackage-security-prof libghc-hashmap-dev libghc-hashmap-doc libghc-hashmap-prof
 
+apt-get install -y boogie gargoyle-free libboogie-cil libgeotranz3-dev libgeotranz3.7 libhowardhinnant-date-tz3 libnet-z3950-simple2zoom-perl libnet-z3950-simpleserver-perl libnet-z3950-zoom-perl libnormaliz3 libpwiz3 libyaz-dev libyaz5 libyazpp-dev libyazpp-doc libyazpp6 libz3-4 libz3-dev libz3-java libz3-jni libznz3 python3-z3 ruby-zoom tellico tellico-data tellico-doc tellico-scripts yaz yaz-doc yaz-icu yaz-illclient z3 bolt bolt-tests fonts-aenigma golang-github-hashicorp-go-cleanhttp-dev golang-github-jarcoal-httpmock-dev golang-github-jfbus-httprs-dev irssi-scripts libltc-dev libltc-doc libltc11 libtranscript-dev libxsltc-java liece-dcc mysqltcl plplot-tcl-bin postgresql-pltcl-14 puppet-module-michaeltchapman-galera r-bioc-altcdfenvs r-cran-multcomp r-cran-multcompview tcl-yajltcl yt-dlp
+
 apt --fix-broken install
 apt autoclean
 
@@ -220,7 +222,37 @@ pip install base58
 pip install ecdsa
 pip install requests
 pip install PySimpleGUI
-
+pip install pyfiglet
+pip install make
+pip install cmake
+pip install bitcoin-python3
+pip install yubico-bitcoin
+pip install bitcoin-forecast
+pip install bitcoin-client
+pip install bitcoin-keygen
+pip install polyglot-bitcoin
+pip install dj-bitcoin
+pip install django-bitcoin
+pip install quantworks-bitcoin
+pip install bitcoin-utils
+pip install bitcoin-xyz
+pip install sqlalchemy-bitcoin
+pip install bitcoin.sh
+pip install bitcoin-requests
+pip install bitcoin-graph
+pip install bitcoin-rpc-client
+pip install bitcoin-toolkit
+pip install python-bitcoin
+pip install bitcoin-deposit-worker
+pip install bitcoin-spv-py
+pip install bitcoin-coin-selection
+pip install bitcaviar
+pip install googleparser
+pip install coinbridge
+pip install bitcoins
+pip install bitcoincli
+pip install bitcoinrpc
+pip install darth
 
 apt autoclean
 pip cache purge
