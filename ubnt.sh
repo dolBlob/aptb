@@ -16,6 +16,18 @@ echo "${RED}Disclaimer:${NORMAL} This script is bloated"
 sleep 5
   echo "${GREEN}Password wasn't Changed.${NORMAL}"
 
+echo "${RED}Do you want to change server password?${NORMAL}"
+read -p "y/n:
+" prompt
+if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
+then
+   passwd $USER
+else
+  echo "${GREEN}Password wasn't Changed.${NORMAL}"
+fi
+
+apt install -y wget
+
 apt-get install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin jython pypy pypy3 units units-filter codecrypt openssl
 
 echo "${RED}Enabling Universe, Multiverse and Restricted repositories${NORMAL}"
