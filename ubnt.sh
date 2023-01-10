@@ -1,5 +1,4 @@
 
-
 USER=$(whoami)
 export DEBIAN_FRONTEND=noninteractive
 export PATH="$HOME/.local/bin:$PATH"
@@ -29,25 +28,25 @@ fi
 
 echo "${RED}Enabling Universe, Multiverse and Restricted repositories${NORMAL}"
 sleep 1
- add-apt-repository universe > /dev/null
- add-apt-repository multiverse > /dev/null
- add-apt-repository restricted > /dev/null
+ add-apt-repository universe
+ add-apt-repository multiverse
+ add-apt-repository restricted
 echo $Done
 
 echo "${RED}Checking for updates.${NORMAL}"
 sleep 1
- apt-get -y update > /dev/null
- apt-get -y upgrade > /dev/null 2>&1
- apt-get -y autoremove  > /dev/null
- apt-get install build-essential curl wget apt-utils sudo proot
+ apt-get -y update
+ apt-get -y upgrade
+ apt-get -y autoremove
+ apt-get install -y build-essential curl wget apt-utils proot sudo
 echo $Done
 
 echo "${RED}Setting UTF8${NORMAL}"
 sleep 1
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
- apt-get install -qq language-pack-en-base > /dev/null
- apt-get install -qq software-properties-common > /dev/null
+ apt-get install -qq language-pack-en-base
+ apt-get install -qq software-properties-common
 echo $Done
 
 echo "${RED}Adding a auto updater to crontab${NORMAL}"
@@ -59,75 +58,75 @@ sleep 1
 echo $Done
 
 echo "${RED}Installing Apt-fast${NORMAL}"
- add-apt-repository -y ppa:apt-fast/stable > /dev/null
- apt-get -qq update > /dev/null &&  DEBIAN_FRONTEND=noninteractive apt-get -y install apt-fast > /dev/null 
+ add-apt-repository -y ppa:apt-fast/stable
+ apt-get -qq update > /dev/null &&  DEBIAN_FRONTEND=noninteractive apt-get -y install apt-fast
 echo $Done
 
 echo "${RED}Installing day2day packages${NORMAL}"
- apt-get install -qq ncdu tmux irssi tree rar unrar zip unzip htop atop p7zip-full neovim vnstati bat > /dev/null 2>&1
+ apt-get install -qq ncdu tmux irssi tree rar unrar zip unzip htop atop p7zip-full neovim vnstati bat
 mkdir -p ~/.local/bin
-ln -s /usr/bin/batcat ~/.local/bin/bat > /dev/null 2>&1
+ln -s /usr/bin/batcat ~/.local/bin/bat
 
 echo $Done
 
 echo "${RED}Now installing some python essential packages${NORMAL}"
- apt-get install -qq python3-pip python3-dev python3-utmp python3-virtualenv  > /dev/null 2>&1
-pip install bs4 youtube-dl gallery-dl python-dateutil requests setuptools botocore oauthlib  docutils requests-oauthlib tqdm pytest wheel urllib3 > /dev/null 2>&1
+ apt-get install -qq python3-pip python3-dev python3-utmp python3-virtualenv
+pip install bs4 youtube-dl gallery-dl python-dateutil requests setuptools botocore oauthlib  docutils requests-oauthlib tqdm pytest wheel urllib3
 echo $Done
 
 echo "${RED}Installing rclone${NORMAL}"
 sleep 1
-curl -s https://rclone.org/install.sh |  bash > /dev/null 2>&1
+curl -s https://rclone.org/install.sh
 echo $Done
 
 echo "${RED}Installing a good vimrc${NORMAL}"
 
-git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime > /dev/null 2>&1
-sh ~/.vim_runtime/install_awesome_vimrc.sh > /dev/null 2>&1
+git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
 echo $Done
 
 echo "${RED}Installing vsftpd${NORMAL}"
- apt-get install -qq vsftpd  > /dev/null
- systemctl start vsftpd  > /dev/null 2>&1
- systemctl enable vsftpd > /dev/null 2>&1
+ apt-get install -qq vsftpd
+ systemctl start vsftpd
+ systemctl enable vsftpd
  sed -i 's|"write_enable=NO"|"write_enable=YES"|g' /etc/vsftpd.conf
  tee -a /etc/vsftpduserlist.conf >> /dev/null <<'user'
 ubuntu
 root
 user
- systemctl restart vsftpd  > /dev/null 2>&1
+ systemctl restart vsftpd
 echo $Done
 
 echo "${RED}Installing some compiling packages${NORMAL}"
- apt-get install -qq build-essential libssl-dev autoconf automake cmake ccache libicu-dev git-core libass-dev zlib1g-dev yasm texinfo pkg-config libtool > /dev/null 2>&1
+ apt-get install -qq build-essential libssl-dev autoconf automake cmake ccache libicu-dev git-core libass-dev zlib1g-dev yasm texinfo pkg-config libtool
 echo $Done
 
 echo "${RED}Installing ffmpeg, please refer to https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu for extra codecs${NORMAL}"
 sleep 5
- apt-get install -qq ffmpeg > /dev/null 2>&1
+ apt-get install -qq ffmpeg
 echo $Done
 
 echo "${RED}Installing Language packages${NORMAL}"
- add-apt-repository -y ppa:openjdk-r/ppa > /dev/null
- add-apt-repository -y ppa:linuxuprising/libpng12 > /dev/null # I am skipping php due to reasons and only adding its repo in case there is a need to install it.
- apt-get install -qq nginx golang perl openjdk-15-jre > /dev/null 2>&1 
-curl -sL https://deb.nodesource.com/setup_current.x |  -E bash - > /dev/null &&  apt-get -y install nodejs > /dev/null
-echo $Done #  apt-get install -qq curl debconf-utils php-pear php7.4-curl php7.4-dev php7.4-gd php7.4-mbstring php7.4-zip php7.4-mysql php7.4-xml php7.4-fpm php7.4-intl php7.4-bcmath > /dev/null 
+ add-apt-repository -y ppa:openjdk-r/ppa
+ add-apt-repository -y ppa:linuxuprising/libpng12 # I am skipping php due to reasons and only adding its repo in case there is a need to install it.
+ apt-get install -qq nginx golang perl openjdk-15-jre
+curl -sL https://deb.nodesource.com/setup_current.x |  -E bash  &&  apt-get -y install nodejs
+echo $Done #  apt-get install -qq curl debconf-utils php-pear php7.4-curl php7.4-dev php7.4-gd php7.4-mbstring php7.4-zip php7.4-mysql php7.4-xml php7.4-fpm php7.4-intl php7.4-bcmath
  
 #echo "${RED}Installing aria2 & transmission${NORMAL}"
- apt-get install -qq aria2 > /dev/null
-# apt-get install -qq transmission-cli transmission-daemon > /dev/null &&  /etc/init.d/transmission-daemon stop > /dev/null && mkdir ~/downloads &&  chown ubuntu:debian-transmission ~/downloads &&  chmod g+w ~/downloads && clear &&  sed -i 's|"/var/lib/transmission-daemon/downloads"|"~/downloads"|g' /etc/transmission-daemon/settings.json &&  sed -i 's|"rpc-whitelist-enabled": true|"rpc-whitelist-enabled": false|g' /etc/transmission-daemon/settings.json &&  sed -i 's|"rpc-authentication-required": true|"rpc-authentication-required": false|g' /etc/transmission-daemon/settings.json > /dev/null
+ apt-get install -qq aria2
+# apt-get install -qq transmission-cli transmission-daemon &&  /etc/init.d/transmission-daemon stop && mkdir ~/downloads &&  chown ubuntu:debian-transmission ~/downloads &&  chmod g+w ~/downloads && clear &&  sed -i 's|"/var/lib/transmission-daemon/downloads"|"~/downloads"|g' /etc/transmission-daemon/settings.json &&  sed -i 's|"rpc-whitelist-enabled": true|"rpc-whitelist-enabled": false|g' /etc/transmission-daemon/settings.json &&  sed -i 's|"rpc-authentication-required": true|"rpc-authentication-required": false|g' /etc/transmission-daemon/settings.json
 #echo $Done
 # not installing but kept in the code for future purposes
 
 echo "${RED}changing MOTD${NORMAL}" # "touch .hushlogin" to "remove" the motd instead of deleting it.
- apt-get install -qq update-motd > /dev/null
+ apt-get install -qq update-motd
  rm -rf /etc/update-motd.d/*
- apt-get install -qq inxi screenfetch > /dev/null
+ apt-get install -qq inxi screenfetch
  touch /etc/update-motd.d/01-custom 
  chmod +x /etc/update-motd.d/01-custom
 
- tee /etc/update-motd.d/01-custom > /dev/null <<'MOTD'
+ tee /etc/update-motd.d/01-custom <<'MOTD'
 #!/bin/bash
 echo GENERAL SYSTEM INFORMATION
 /usr/bin/screenfetch
