@@ -39,6 +39,7 @@ sleep 1
  apt-get -y update > /dev/null
  apt-get -y upgrade > /dev/null 2>&1
  apt-get -y autoremove  > /dev/null
+ apt-get install build-essential curl wget apt-utils sudo proot
 echo $Done
 
 echo "${RED}Setting UTF8${NORMAL}"
