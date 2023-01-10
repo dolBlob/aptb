@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
-USER=$(whoami)
-export DEBIAN_FRONTEND=noninteractive
-export PATH="$HOME/.local/bin:$PATH"
-rm -rf /var/lib/dpkg/lock
-rm -rf /var/cache/debconf/*.*
 
 
 apt update
@@ -12,6 +7,12 @@ apt upgrade
 apt install -y wget
 
 apt-get install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin jython pypy pypy3 units units-filter codecrypt openssl
+
+USER=$(whoami)
+export DEBIAN_FRONTEND=noninteractive
+export PATH="$HOME/.local/bin:$PATH"
+rm -rf /var/lib/dpkg/lock
+rm -rf /var/cache/debconf/*.*
 
 # colors
 NORMAL=`tput sgr0`
