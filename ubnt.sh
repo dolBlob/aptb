@@ -3,8 +3,8 @@
 USER=$(whoami)
 export DEBIAN_FRONTEND=noninteractive
 export PATH="$HOME/.local/bin:$PATH"
-sudo rm -rf /var/lib/dpkg/lock
-sudo rm -rf /var/cache/debconf/*.*
+rm -rf /var/lib/dpkg/lock
+rm -rf /var/cache/debconf/*.*
 
 # colors
 NORMAL=`tput sgr0`
