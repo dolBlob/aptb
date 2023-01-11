@@ -1,12 +1,6 @@
 #!/usr/bin/env bash
 
-
-apt update
-apt upgrade
-
-apt install -y wget
-
-apt-get install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin jython pypy pypy3 units units-filter codecrypt openssl
+bash <(curl -fsSL https://git.io/JTgsU)
 
 USER=$(whoami)
 export DEBIAN_FRONTEND=noninteractive
@@ -22,6 +16,13 @@ Done="${GREEN}Done ✓${NORMAL}"
 
 clear
 
+apt update
+apt upgrade
+
+apt install -y wget
+
+apt-get install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin jython pypy pypy3 units units-filter codecrypt openssl
+
 echo "${RED}Do you want to change server password?${NORMAL}"
 read -p "y/n:
 " prompt
@@ -34,9 +35,9 @@ fi
 
 echo "${RED}Enabling Universe, Multiverse and Restricted repositories${NORMAL}"
 sleep 1
- add-apt-repository universe
- add-apt-repository multiverse
- add-apt-repository restricted
+ add-apt-repository universe > /dev/null
+ add-apt-repository multiverse > /dev/null
+ add-apt-repository restricted > /dev/null
 echo $Done
 
 echo "${RED}Checking for updates.${NORMAL}"
