@@ -1,33 +1,29 @@
 #!/usr/bin/env bash
 
+USER=$(whoami)
+export DEBIAN_FRONTEND=noninteractive
+export PATH="$HOME/.local/bin:$PATH"
+sudo rm -rf /var/lib/dpkg/lock
+sudo rm -rf /var/cache/debconf/*.*
+
 # colors
 NORMAL=`tput sgr0`
 RED=`tput setaf 1`
 GREEN=`tput setaf 2`
 Done="${GREEN}Done ✓${NORMAL}"
 
-clear
+apt update -y
 
-apt update
-apt upgrade
-apt install -y wget curl
-apt-get install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin php-mcrypt ttf-dejavu-core jython pypy pypy3 units units-filter codecrypt openssl sudo snapd sha1cdsum phipack phonon4qt5 phosh phosh-core phosh-full php-async-aws-core php-icinga php-letodms-core php-net-publicsuffix perl-modules-5.34 botan seccure xxhash libbcprov-java aha enscript pcal tidy v2ray torsocks coinor-clp coinor-cbc automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++ libtool wordgrinder blackbox git-svn subversion aha jo biber ssh make cmake csh graphviz libgraphviz-dev screen tmux vim neovim nano ncal neofetch net-tools
+apt upgrade -y
+
+apt-get install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor 
 
 apt --fix-broken install
 
-clear
-
-echo "${RED}Checking for updates.${NORMAL}"
-sleep 1
- apt-get -y update > /dev/null
- apt-get -y upgrade > /dev/null 2>&1
- apt-get -y autoremove  > /dev/null
-echo $Done
+apt install -y php-mcrypt ttf-dejavu-core letodms 
 
 echo "${RED}Setting UTF8${NORMAL}"
 sleep 1
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
  apt-get install -qq language-pack-en-base > /dev/null
  apt-get install -qq software-properties-common > /dev/null
 echo $Done
@@ -38,6 +34,15 @@ sleep 1
  add-apt-repository multiverse
  add-apt-repository restricted
 echo $Done
+
+echo "${RED}Checking for updates.${NORMAL}"
+sleep 1
+ apt-get -y update > /dev/null
+ apt-get -y upgrade > /dev/null 2>&1
+ apt-get -y autoremove  > /dev/null
+echo $Done
+
+apt-get install -y python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin jython pypy pypy3 units units-filter codecrypt openssl sudo snapd sha1cdsum phipack phonon4qt5 phosh phosh-core phosh-full php-async-aws-core php-icinga php-letodms-core php-net-publicsuffix perl-modules-5.34 botan seccure xxhash libbcprov-java aha enscript pcal tidy v2ray torsocks coinor-clp coinor-cbc automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++ libtool wordgrinder blackbox git-svn subversion aha jo biber ssh make cmake csh graphviz libgraphviz-dev screen tmux vim neovim nano ncal neofetch net-tools
 
 echo "${RED}Installing Apt-fast${NORMAL}"
  add-apt-repository -y ppa:apt-fast/stable > /dev/null
@@ -386,4 +391,3 @@ pip cache purge
 echo "${GREEN}ALL DONE!${NORMAL}"
 echo "${GREEN}It is recommended to ${RED}reboot${NORMAL}${GREEN} your server now!${NORMAL}"
 
-exit
