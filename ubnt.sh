@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 
-bash <(curl -fsSL https://git.io/JTgsU)
-
 USER=$(whoami)
 export DEBIAN_FRONTEND=noninteractive
-export PATH="$HOME/.local/bin:$PATH"
-rm -rf /var/lib/dpkg/lock
-rm -rf /var/cache/debconf/*.*
 
 # colors
 NORMAL=`tput sgr0`
@@ -18,27 +13,12 @@ clear
 
 apt update
 apt upgrade
+apt install -y wget curl
+apt-get install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin php-mcrypt ttf-dejavu-core jython pypy pypy3 units units-filter codecrypt openssl sudo snapd sha1cdsum phipack phonon4qt5 phosh phosh-core phosh-full php-async-aws-core php-icinga php-letodms-core php-net-publicsuffix perl-modules-5.34 botan seccure xxhash libbcprov-java aha enscript pcal tidy v2ray torsocks coinor-clp coinor-cbc automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++ libtool wordgrinder blackbox git-svn subversion aha jo biber ssh make cmake csh graphviz libgraphviz-dev screen tmux vim neovim nano ncal neofetch net-tools
 
-apt install -y wget
+apt --fix-broken install
 
-apt-get install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin jython pypy pypy3 units units-filter codecrypt openssl
-
-echo "${RED}Do you want to change server password?${NORMAL}"
-read -p "y/n:
-" prompt
-if [[ $prompt == "y" || $prompt == "Y" || $prompt == "yes" || $prompt == "Yes" ]]
-then
-   passwd $USER
-else
-  echo "${GREEN}Password wasn't Changed.${NORMAL}"
-fi
-
-echo "${RED}Enabling Universe, Multiverse and Restricted repositories${NORMAL}"
-sleep 1
- add-apt-repository universe > /dev/null
- add-apt-repository multiverse > /dev/null
- add-apt-repository restricted > /dev/null
-echo $Done
+clear
 
 echo "${RED}Checking for updates.${NORMAL}"
 sleep 1
@@ -55,17 +35,24 @@ export LANG=en_US.UTF-8
  apt-get install -qq software-properties-common > /dev/null
 echo $Done
 
+echo "${RED}Enabling Universe, Multiverse and Restricted repositories${NORMAL}"
+sleep 1
+ add-apt-repository universe
+ add-apt-repository multiverse
+ add-apt-repository restricted
+echo $Done
+
+echo "${RED}Installing Apt-fast${NORMAL}"
+ add-apt-repository -y ppa:apt-fast/stable > /dev/null
+ apt-get -qq update > /dev/null &&  DEBIAN_FRONTEND=noninteractive apt-get -y install apt-fast > /dev/null 
+echo $Done
+
 echo "${RED}Adding a auto updater to crontab${NORMAL}"
 sleep 1
  crontab -l > updater
  echo "0 0 * * *     apt-get update &&  apt-get upgrade -y &&  apt autoremove && echo updated@SUCCESS >> ~/.update.log" >> updater
  crontab updater
  rm updater
-echo $Done
-
-echo "${RED}Installing Apt-fast${NORMAL}"
- add-apt-repository -y ppa:apt-fast/stable > /dev/null
- apt-get -qq update > /dev/null &&  DEBIAN_FRONTEND=noninteractive apt-get -y install apt-fast > /dev/null 
 echo $Done
 
 echo "${RED}Installing day2day packages${NORMAL}"
@@ -167,7 +154,6 @@ apt install -y ubuntu-restricted-extras ffmpeg
 
 apt install -y docker.io docker-compose
 
-
 apt-get install -y build-essential apt-utils git wget curl nano proot cowsay perl figlet toilet ruby zsh asciidoctor python3 php apache2 golang nodejs patchelf tk tor neofetch fakeroot composer doxygen php php-fpm php-apcu php-ldap php-imagick php-redis php-pgsql phpmyadmin jython pypy pypy3 units units-filter codecrypt openssl
 
 gem install paint trollop manpages lolcat lumberjack eye eyes
@@ -221,14 +207,6 @@ apt-get install -y ztex-bmp ypserv ypbind-mt yp-tools yorick xserver-xorg-video-
 apt --fix-broken install
 
 apt-get install -y base58 bruteforce-wallet cgminer coinor-cbc coinor-clp coinor-csdp coinor-csdp-doc coinor-libcbc-dev coinor-libcbc-doc coinor-libcbc3 coinor-libcgl-dev coinor-libcgl-doc coinor-libcgl1 coinor-libclp-dev coinor-libclp-doc coinor-libclp1 coinor-libcoinmp-dev coinor-libcoinmp1v5 coinor-libcoinutils-dev coinor-libcoinutils-doc coinor-libcoinutils3v5 coinor-libdylp-dev coinor-libdylp-doc coinor-libdylp1 coinor-libipopt-dev coinor-libipopt-doc coinor-libipopt1v5 coinor-libipopt1v5-dbg coinor-libosi-dev coinor-libosi-doc coinor-libosi1v5 coinor-libsymphony-dev coinor-libsymphony-doc coinor-libsymphony3 coinor-libvol-dev coinor-libvol-doc coinor-libvol1 coinor-symphony coinst coinst-viewer dose-extra golang-github-btcsuite-btcd-btcec-dev libbase58-0 libbase58-dev libblkmaker-0.1-6 libblkmaker-0.1-dev libcoin-dev libcoin-doc libcoin-runtime libcoin80c libencode-base58-perl liblemon-dev liblemon-doc liblemon-utils liblemon1.3.1 libpolyclipping-dev libpolyclipping22 libsdp-dev libsdp0 libsecp256k1-0 libsecp256k1-dev libsisimai-perl libsoqt520 libsoqt520-dev monero monero-tests neverball neverball-data node-d3-quadtree norsp pd-vbap pidgin-plugin-pack python-duniterpy-doc python3-base58 python3-bip32utils python3-bitcoinlib python3-btchip python3-duniterpy python3-mnemonic python3-pivy python3-pulp python3-stdnum python3-trezor r-cran-coin r-cran-libcoin r-cran-medadherence r-cran-rcsdp r-cran-rsymphony r-cran-urca tellico tellico-data tellico-doc tellico-scripts trezor wmcoincoin
-
-apt --fix-broken install
-
-apt-get install -y snapd sha1cdsum phipack phonon4qt5 phosh phosh-core phosh-full php-async-aws-core php-icinga php-letodms-core php-net-publicsuffix perl-modules-5.34 botan seccure xxhash libbcprov-java aha enscript pcal tidy v2ray torsocks coinor-clp coinor-cbc
-
-apt-get install -y automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev zlib1g-dev make g++ libtool curl perl proot sudo git ruby asciidoctor php python3 zsh build-essential wordgrinder blackbox git-svn subversion aha jo biber
-
-apt-get install -y git ssh build-essential make cmake csh curl graphviz libgraphviz-dev screen tmux vim neovim nano ncal neofetch net-tools
 
 apt --fix-broken install
 
