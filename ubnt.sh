@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-USER=$(whoami)
-export DEBIAN_FRONTEND=noninteractive
-
 # colors
 NORMAL=`tput sgr0`
 RED=`tput setaf 1`
