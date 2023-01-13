@@ -1,9 +1,6 @@
 export PATH="$HOME/.local/bin:$PATH"
 rm -rf /var/lib/dpkg/lock
 rm -rf /var/cache/debconf/*.*
-rm -rf /var/lib/apt/lists/lock
-rm -rf /var/cache/apt/archives/lock
-
 
 pip install wheel
 pip install colorama
@@ -242,6 +239,7 @@ pip install z3-solver==4.5.1.0
 pip install z3-solver-crosshair
 pip install deal-solver
 pip install z3-solver-mythril
+pip install blockchain-etl
 pip install z4-solver
 pip install blockchain-etl
 
