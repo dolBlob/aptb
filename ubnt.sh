@@ -18,9 +18,8 @@ apt upgrade -y
 
 echo "${RED}Checking for updates.${NORMAL}"
 sleep 1
- apt-get -y update > /dev/null
- apt-get -y upgrade > /dev/null 2>&1
- apt-get -y autoremove  > /dev/null
+ apt-get -y update
+ apt-get -y upgrade
 echo $Done
 
 echo "${RED}Adding a auto updater to crontab${NORMAL}"
