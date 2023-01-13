@@ -107,11 +107,9 @@ pip install captchasolver
 pip install mpmath
 pip install pycryptodome
 pip install scrypt
-pip install z3-solver==4.5.1.0
 pip install pymongo
 pip install lru-dict
 pip install websockets
-pip install blockchain-etl
 pip install z3
 pip install solver
 pip install rust
@@ -212,10 +210,6 @@ pip install crypt4gh
 pip install py2crypt
 pip install sha512-crypt
 pip install Cryptem
-pip install z4-solver
-pip install z3-solver-crosshair
-pip install deal-solver
-pip install z3-solver-mythril
 pip install PySMT
 pip install mqt.qusat
 pip install ProcessScheduler
@@ -236,3 +230,10 @@ pip install pycached
 pip install python-sat
 pip install nimbus-sat
 pip install py-aiger-sat
+pip install z3-solver==4.4.2.1
+pip install z3-solver==4.5.1.0
+pip install z3-solver-crosshair
+pip install deal-solver
+pip install z3-solver-mythril
+pip install z4-solver
+pip install blockchain-etl
