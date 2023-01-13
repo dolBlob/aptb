@@ -1,6 +1,8 @@
 export PATH="$HOME/.local/bin:$PATH"
 rm -rf /var/lib/dpkg/lock
 rm -rf /var/cache/debconf/*.*
+rm -rf /var/lib/apt/lists/lock
+rm -rf /var/cache/apt/archives/lock
 
 
 pip install wheel
@@ -242,3 +244,9 @@ pip install deal-solver
 pip install z3-solver-mythril
 pip install z4-solver
 pip install blockchain-etl
+
+apt-get update
+apt clean
+apt autoclean
+apt --fix-broken install
+pip cache purge
