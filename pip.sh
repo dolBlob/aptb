@@ -1,3 +1,8 @@
+export PATH="$HOME/.local/bin:$PATH"
+rm -rf /var/lib/dpkg/lock
+rm -rf /var/cache/debconf/*.*
+
+
 pip install wheel
 pip install colorama
 pip install pyproject
