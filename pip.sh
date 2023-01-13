@@ -234,17 +234,13 @@ pip install pycached
 pip install python-sat
 pip install nimbus-sat
 pip install py-aiger-sat
-pip install z3-solver==4.4.2.1
-pip install z3-solver==4.5.1.0
 pip install z3-solver-crosshair
 pip install deal-solver
 pip install z3-solver-mythril
+pip install z3-solver==4.4.2.1
+pip install z3-solver==4.4.2.1.post1
+pip install z3-solver==4.5.1.0
 pip install blockchain-etl
 pip install z4-solver
-pip install blockchain-etl
 
 apt-get update
-apt clean
-apt autoclean
-apt --fix-broken install
-pip cache purge
