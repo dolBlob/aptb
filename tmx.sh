@@ -118,7 +118,6 @@ pip install pycore
 pip install pyopenssl
 pip install pychroot
 pip install rsa
-pip install nodejs
 pip install argparse
 pip install async_generator
 pip install asyncio
