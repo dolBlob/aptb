@@ -22,6 +22,7 @@ pip install cffi
 pip install chardet
 pip install faker
 pip install fake-headers
+pip install fake-useragent
 pip install html5lib
 pip install idna
 pip install mechanize
