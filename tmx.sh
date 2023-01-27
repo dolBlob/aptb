@@ -1,5 +1,10 @@
 #!/bin/bash
 
+export PATH="$HOME/.local/bin:$PATH"
+rm -rf /var/lib/dpkg/lock
+rm -rf /var/cache/debconf/*.*
+
+
 current_dir=$(pwd)
 pkg install ncurses-utils && clear 
 #vars
