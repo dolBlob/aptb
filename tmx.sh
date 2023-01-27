@@ -3,7 +3,8 @@
 export PATH="$HOME/.local/bin:$PATH"
 rm -rf /var/lib/dpkg/lock
 rm -rf /var/cache/debconf/*.*
-
+rm -rf /var/lib/apt/lists/lock
+rm -rf /var/cache/apt/archives/lock
 
 current_dir=$(pwd)
 pkg install ncurses-utils && clear 
