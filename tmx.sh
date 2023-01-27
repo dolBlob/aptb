@@ -27,6 +27,8 @@ pkg install unstable-repo
 pkg install x11-repo
 pkg install root-repo
 clear 
+apt install wireshark-gtk -y
+apt install wireshark-gtk-static -y
 apt install nmap -y
 apt install nano -y
 apt install python -y
