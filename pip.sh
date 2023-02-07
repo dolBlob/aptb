@@ -1,6 +1,8 @@
 export PATH="$HOME/.local/bin:$PATH"
 rm -rf /var/lib/dpkg/lock
 rm -rf /var/cache/debconf/*.*
+rm -rf /var/lib/apt/lists/lock
+rm -rf /var/cache/apt/archives/lock
 
 pip install wheel
 pip install colorama
