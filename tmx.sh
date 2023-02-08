@@ -103,7 +103,7 @@ pkg upgrade -y
     pkg install -y coinor-clp botan botan-static codecrypt crypto-monitor cryptopp cryptopp-static haskell-cryptohash-sha256 haskell-ed25519 libbcprov-java libgcrypt libksba libnettle libolm libsodium libtomcrypt mbedtls nettle openssl openssl-1.1 openssl-tool openssl1.1-tool python-cryptography seccure tergent xxhash
     pkg install -y aha enscript gumbo-parser html-xml-utils html2text libhtmlcxx libhtmlcxx-static mdbook-katex monolith pcal pup tidy v2ray torsocks torsocks-static 
     pkg install -y biber fribidi haskell-text-short icu-devtools libicu libtvision libunistring utf8proc utfdecode wordgrinder blackbox git-svn subversion subversion-perl subversion-perl-static subversion-static yq jo
-    pkg install -y libarrow-python libarrow-cpp
+    pkg install -y python-pyarrow
     pip install wheel
     pip install colorama
     pip install pyproject
