@@ -244,6 +244,16 @@ pip install z3-solver==4.4.2.1
 pip install z3-solver==4.4.2.1.post1
 pip install z3-solver==4.5.1.0
 pip install blockchain-etl
+pip install polygon-etl
+pip install ethereum-etl
+pip install cryptodatapy
+pip install avalanche-etl
+pip install solana-etl
+pip install tezos-etl
+pip install cosmos-etl
+pip install bitcoin-etl
+pip install bsc-etl
+pip install polygon
 pip install z4-solver
 
 apt-get update
