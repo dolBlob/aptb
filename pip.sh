@@ -1,8 +1,3 @@
-export PATH="$HOME/.local/bin:$PATH"
-rm -rf /var/lib/dpkg/lock
-rm -rf /var/cache/debconf/*.*
-rm -rf /var/lib/apt/lists/lock
-rm -rf /var/cache/apt/archives/lock
 
 pip install wheel
 pip install colorama
@@ -218,8 +213,6 @@ pip install py2crypt
 pip install sha512-crypt
 pip install Cryptem
 pip install PySMT
-pip install mqt.qusat
-pip install ProcessScheduler
 pip install pydelta
 pip install pylambda
 pip install bravo1996
@@ -277,11 +270,13 @@ pip install tezos-etl
 pip install cosmos-etl
 pip install bsc-etl
 pip install polygon
+pip install mqt.qusat
 pip install z3-solver==4.5.1.0
 pip install blockchain-etl
 pip install deal-solver
 pip install z3-solver-crosshair
 pip install z3-solver-mythril
+pip install ProcessScheduler
 pip install z4-solver
 
-apt-get update
+
