@@ -7,6 +7,7 @@ rm -rf /var/lib/dpkg/lock
 rm -rf /var/cache/debconf/*.*
 rm -rf /var/lib/apt/lists/lock
 rm -rf /var/cache/apt/archives/lock
+dpkg --configure -a
 
 # colors
 NORMAL=`tput sgr0`
