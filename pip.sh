@@ -270,6 +270,7 @@ pip install tezos-etl
 pip install cosmos-etl
 pip install bsc-etl
 pip install polygon
+pip install stratum
 pip install mqt.qusat
 pip install z3-solver==4.5.1.0
 pip install blockchain-etl
