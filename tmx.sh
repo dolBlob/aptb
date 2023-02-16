@@ -104,6 +104,7 @@ pkg upgrade -y
     pkg install -y aha enscript gumbo-parser html-xml-utils html2text libhtmlcxx libhtmlcxx-static mdbook-katex monolith pcal pup tidy v2ray torsocks torsocks-static 
     pkg install -y biber fribidi haskell-text-short icu-devtools libicu libtvision libunistring utf8proc utfdecode wordgrinder blackbox git-svn subversion subversion-perl subversion-perl-static subversion-static yq jo
     pkg install -y python-pyarrow
+    pkg install -y dbus-python frida-python gnumeric-python gst-python jython libxml2-python libxml2-python-static matplotlib opencv-python panda3d panda3d-samples pycairo pygobject pypy pypy3 pyqt5 pystring python python-apsw python-apt python-bcrypt python-cryptography python-ensurepip-wheels python-lameenc python-numpy python-numpy-static python-pillow python-pip python-pyqtwebengine python-static python-tkinter python-tldp python-xcbgen python2 python2-static pyunbound recoll-python ruff tsduck-python units-cur vim-python weechat-matrix-rs weechat-python-plugin
     pip install wheel
     pip install colorama
     pip install pyproject
