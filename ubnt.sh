@@ -287,3 +287,4 @@ apt autoclean
 echo "${GREEN}ALL DONE!${NORMAL}"
 echo "${GREEN}running bash${RED}💩pypi packages${NORMAL}${GREEN} your server now!${NORMAL}"
 
+bash pip.sh
